@@ -1,5 +1,6 @@
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
+import babel from 'rollup-plugin-babel'
 
 const outputDir = 'dist'
 const bundleName = 'bundle'
@@ -17,6 +18,7 @@ export default {
       format: 'esm'
     },
     {
+      name: 'Placeholder', // change this to package.json module name
       file: `${outputDir}/${bundleName}.umd.js`,
       format: 'umd',
       globals: {
@@ -24,6 +26,10 @@ export default {
       }
     }
   ],
-  plugins: [resolve(), production && terser()],
+  plugins: [
+    babel({ exclude: 'node_modules/**' }),
+    resolve(),
+    production && terser()
+  ],
   external: ['react']
 }
