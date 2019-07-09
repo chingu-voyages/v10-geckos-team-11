@@ -18,7 +18,7 @@ export default {
       format: 'esm'
     },
     {
-      name: 'Placeholder', // change this to package.json module name
+      name: 'ReactPaperCSS',
       file: `${outputDir}/${bundleName}.umd.js`,
       format: 'umd',
       globals: {
