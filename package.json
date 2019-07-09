@@ -54,5 +54,7 @@
   "engines": {
     "node": ">=8"
   },
-  "papercss": ">=1.6.1"
+  "peerDependencies": {
+    "papercss": ">=1.6.1"
+  }
 }
