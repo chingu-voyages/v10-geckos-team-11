@@ -1,4 +1,5 @@
 import { configure, addParameters } from '@storybook/react'
+import '../node_modules/papercss/dist/paper.min.css'
 
 import packageJson from '../package.json'
 
@@ -11,7 +12,7 @@ function loadStories () {
 addParameters({
   options: {
     isFullScreen: false,
-    name: 'Placeholder', // Change this
+    name: 'React PaperCSS',
     url: packageJson.repository,
     showPanel: false
   }
