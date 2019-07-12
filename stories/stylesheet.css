@@ -1,0 +1,35 @@
+.card-small {
+  width: 20rem;
+}
+
+.margin-small {
+  margin: 20px;
+}
+
+.color-brown {
+  color: brown;
+}
+
+.color-black {
+  color: black;
+}
+
+.text-large {
+  font-size: 32px;
+}
+
+.text-medium {
+  font-size: 24px;
+}
+
+.text-small {
+  font-size: 16px;
+}
+
+.no-underline {
+  background-image: none;
+}
+
+.vertical-stretch {
+  height: 250px;
+}
