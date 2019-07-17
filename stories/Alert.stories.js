@@ -4,7 +4,9 @@ import { storiesOf } from '@storybook/react'
 import Alert from '../src/Alert'
 
 storiesOf('Alert/Dismissable', module)
-  .add('default', () => <Alert dismissable id="dismissable-alert" />)
+  .add('default', () => {
+    return <Alert dismissable id="dismissable-alert" />
+  })
   .add('primary', () => (
     <Alert dismissable id="dismissable-alert-primary" color="primary" />
   ))

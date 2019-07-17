@@ -1,9 +1,12 @@
-import { configure, addParameters } from '@storybook/react'
-import '../node_modules/papercss/dist/paper.min.css'
+import { configure, addParameters, addDecorator } from '@storybook/react'
+import { jsxDecorator } from 'storybook-addon-jsx'
 
+import '../node_modules/papercss/dist/paper.min.css'
 import packageJson from '../package.json'
 
 const req = require.context('../stories', true, /\.js$/)
+
+addDecorator(jsxDecorator)
 
 function loadStories () {
   req.keys().forEach(filename => req(filename))
@@ -14,7 +17,8 @@ addParameters({
     isFullScreen: false,
     name: 'React PaperCSS',
     url: packageJson.repository,
-    showPanel: false
+    showPanel: true,
+    panelPosition: 'bottom'
   }
 })
 
