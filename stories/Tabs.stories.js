@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Tabs from '../src/Tabs'
-import TabHeading from '../src/TabHeading'
-import TabContent from '../src/TabContent'
+import Tabs from '../src/Tabs/Tabs'
+import TabHeading from '../src/Tabs/TabHeading'
+import TabContent from '../src/Tabs/TabContent'
 
 storiesOf('Tabs', module).add('two tabs', () => (
   <Tabs>
