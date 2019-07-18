@@ -1,6 +1,10 @@
 {
-  "extends": ["standard", "plugin:react/recommended"],
-  "plugins": ["react"],
+  "extends": [
+    "standard",
+    "plugin:react/recommended",
+    "plugin:jest/recommended"
+  ],
+  "plugins": ["react", "jest"],
   "settings": {
     "react": {
       "version": "detect"
