@@ -15,7 +15,9 @@ const Image = ({ float, noResponsive, noBorder, src }) => {
     imageClass.push('no-border')
   }
 
-  return <img className={imageClass.join(' ')} src={src} />
+  const className = imageClass.length > 0 ? imageClass.join(' ') : undefined
+
+  return <img className={className} src={src} />
 }
 
 export default Image
