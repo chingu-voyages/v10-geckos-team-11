@@ -5,7 +5,7 @@ import Article from '../src/Article/Article'
 import ArticleTitle from '../src/Article/ArticleTitle'
 import ArticleMeta from '../src/Article/ArticleMeta'
 
-storiesOf('Article', module).add('default', () => {
+storiesOf('Article', module).add('Article', () => {
   return (
     <Article>
       <ArticleTitle>Article Title</ArticleTitle>
