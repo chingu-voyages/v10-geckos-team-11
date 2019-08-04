@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Alert = ({ color, dismissable, id }) =>
+const Alert = ({ color, dismissable, id, children }) =>
   dismissable ? (
     <>
       <input className="alert-state" id={id} type="checkbox" />
@@ -12,7 +12,7 @@ const Alert = ({ color, dismissable, id }) =>
       </div>{' '}
     </>
   ) : (
-    <div className={`alert alert-${color}`}>Alert-primary</div>
+    <div className={`alert alert-${color}`}>{children}</div>
   )
 
 export default Alert
