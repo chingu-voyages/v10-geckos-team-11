@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Border from '../src/Border/Border'
+import Border from '../src/Border/'
 
 storiesOf('Border', module)
   .add('shapes', () => {
