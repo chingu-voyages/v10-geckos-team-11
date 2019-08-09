@@ -23,7 +23,7 @@ storiesOf('Button', module)
         <Button>Default</Button>
         <Button size="small">Small</Button>
         <div className="col-6 col">
-          <Button size="block">Block level</Button>
+          <Button block>Block level</Button>
         </div>
       </>
     )

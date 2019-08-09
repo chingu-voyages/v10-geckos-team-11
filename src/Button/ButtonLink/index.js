@@ -1,9 +1,13 @@
 import React from 'react'
 
-const ButtonLink = ({ className, color, size, href, children }) => {
+const ButtonLink = ({ className, block, color, size, href, children }) => {
   let buttonClass = 'paper-btn'
   if (size) {
     buttonClass = `${buttonClass} btn-${size}`
+  }
+
+  if (block) {
+    buttonClass = buttonClass ? `${buttonClass} btn-block` : 'btn-block'
   }
 
   if (color) {

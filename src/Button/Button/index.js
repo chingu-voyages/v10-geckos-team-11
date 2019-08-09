@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Button = ({ className, color, size, disabled, children }) => {
+const Button = ({ className, color, size, block, disabled, children }) => {
   let buttonClass
   if (size) {
     buttonClass = `btn-${size}`
+  }
+
+  if (block) {
+    buttonClass = buttonClass ? `${buttonClass} btn-block` : 'btn-block'
   }
 
   if (color) {
