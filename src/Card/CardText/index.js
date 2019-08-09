@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CardText = ({ className, children }) => {
+const CardText = ({ className = '', children }) => {
   return <p className={`card-text ${className}`}>{children}</p>
 }
 
