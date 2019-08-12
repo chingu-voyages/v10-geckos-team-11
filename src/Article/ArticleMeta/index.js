@@ -25,7 +25,7 @@ const ArticleMeta = ({
     articleMetaClassName = `${articleMetaClassName} ${marginClassName}`
   }
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     articleMetaClassName = `${articleMetaClassName} ${paddingClassName}`
   }
 

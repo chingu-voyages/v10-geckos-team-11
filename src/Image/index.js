@@ -2,7 +2,15 @@ import React from 'react'
 import getMarginClassName from '../utilities/getMarginClassName'
 import getPaddingClassName from '../utilities/getPaddingClassName'
 
-const Image = ({ float, noResponsive, noBorder, src, margin, padding }) => {
+const Image = ({
+  float,
+  noResponsive,
+  noBorder,
+  src,
+  margin,
+  padding,
+  bgColor
+}) => {
   const imageClass = []
   let className = ''
   if (imageClass.length > 0) {
@@ -27,8 +35,12 @@ const Image = ({ float, noResponsive, noBorder, src, margin, padding }) => {
   }
 
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     className = `${className} ${paddingClassName}`
+  }
+
+  if (bgColor) {
+    className = `${className} background-${bgColor}`
   }
 
   return <img className={className} src={src} />

@@ -38,7 +38,7 @@ const Border = ({
     borderClassName = `${borderClassName} ${marginClassName}`
   }
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     borderClassName = `${borderClassName} ${paddingClassName}`
   }
 

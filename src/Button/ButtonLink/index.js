@@ -35,7 +35,7 @@ const ButtonLink = ({
   }
 
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     buttonClass = `${buttonClass} ${paddingClassName}`
   }
 

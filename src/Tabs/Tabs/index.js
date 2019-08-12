@@ -1,6 +1,8 @@
 import React from 'react'
+import getMarginClassName from '../../utilities/getMarginClassName'
+import getPaddingClassName from '../../utilities/getPaddingClassName'
 
-const Tabs = ({ children }) => {
+const Tabs = ({ children, color, bgColor, margin, padding }) => {
   const childrenElements = React.Children.toArray(children)
 
   // Rearrange tab elements from ordering from:
@@ -27,7 +29,27 @@ const Tabs = ({ children }) => {
 
   const arrangedTabElements = [...tabHeadings, ...tabContents]
 
-  return <div className="row flex-spaces tabs">{arrangedTabElements}</div>
+  let className = 'row flex-spaces tabs'
+
+  const marginClassName = getMarginClassName(margin)
+  if (marginClassName) {
+    className = `${className} ${marginClassName}`
+  }
+
+  const paddingClassName = getPaddingClassName(padding)
+  if (paddingClassName) {
+    className = `${className} ${paddingClassName}`
+  }
+
+  if (bgColor) {
+    className = `${className} background-${bgColor}`
+  }
+
+  if (color) {
+    className = `${className} text-${color}`
+  }
+
+  return <div className={className}>{arrangedTabElements}</div>
 }
 
 export default Tabs

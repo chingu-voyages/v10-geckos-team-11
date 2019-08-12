@@ -12,7 +12,7 @@ const Article = ({ className, children, margin, padding, color, bgColor }) => {
     articleClassName = `${articleClassName} ${marginClassName}`
   }
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     articleClassName = `${articleClassName} ${paddingClassName}`
   }
 

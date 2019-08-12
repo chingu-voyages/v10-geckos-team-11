@@ -25,7 +25,7 @@ const ArticleTitle = ({
     articleTitleClassName = `${articleTitleClassName} ${marginClassName}`
   }
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     articleTitleClassName = `${articleTitleClassName} ${paddingClassName}`
   }
 

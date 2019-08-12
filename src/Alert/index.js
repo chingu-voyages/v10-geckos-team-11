@@ -15,7 +15,7 @@ const Alert = ({ color, dismissable, id, children, margin, padding }) => {
     alertClassName = `${alertClassName} ${marginClassName}`
   }
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     alertClassName = `${alertClassName} ${paddingClassName}`
   }
 

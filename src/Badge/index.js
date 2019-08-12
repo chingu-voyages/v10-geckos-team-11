@@ -18,7 +18,7 @@ const Badge = ({ children, className, color, padding, margin }) => {
   }
 
   const paddingClassName = getPaddingClassName(padding)
-  if (padding) {
+  if (paddingClassName) {
     badgeClassName = `${badgeClassName} ${paddingClassName}`
   }
 
