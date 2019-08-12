@@ -1,6 +1,17 @@
 import React from 'react'
+import getMarginClassName from '../../utilities/getMarginClassName'
+import getPaddingClassName from '../../utilities/getPaddingClassName'
 
-const Button = ({ className, color, size, block, disabled, children }) => {
+const Button = ({
+  className,
+  color,
+  size,
+  block,
+  disabled,
+  children,
+  margin,
+  padding
+}) => {
   let buttonClass
   if (size) {
     buttonClass = `btn-${size}`
@@ -16,6 +27,16 @@ const Button = ({ className, color, size, block, disabled, children }) => {
 
   if (className) {
     buttonClass = buttonClass ? `${buttonClass} ${className}` : className
+  }
+
+  const marginClassName = getMarginClassName(margin)
+  if (marginClassName) {
+    buttonClass = `${buttonClass} ${marginClassName}`
+  }
+
+  const paddingClassName = getPaddingClassName(padding)
+  if (padding) {
+    buttonClass = `${buttonClass} ${paddingClassName}`
   }
 
   return (

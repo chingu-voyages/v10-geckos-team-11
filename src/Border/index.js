@@ -1,4 +1,6 @@
 import React from 'react'
+import getMarginClassName from '../utilities/getMarginClassName'
+import getPaddingClassName from '../utilities/getPaddingClassName'
 
 const Border = ({
   className,
@@ -7,7 +9,9 @@ const Border = ({
   bgColor,
   shape,
   styles,
-  shadow
+  shadow,
+  padding,
+  margin
 }) => {
   let borderClassName = 'border'
 
@@ -28,6 +32,14 @@ const Border = ({
   }
   if (shadow) {
     borderClassName += ` shadow shadow-${shadow}`
+  }
+  const marginClassName = getMarginClassName(margin)
+  if (marginClassName) {
+    borderClassName = `${borderClassName} ${marginClassName}`
+  }
+  const paddingClassName = getPaddingClassName(padding)
+  if (padding) {
+    borderClassName = `${borderClassName} ${paddingClassName}`
   }
 
   return <div className={borderClassName}>{children}</div>

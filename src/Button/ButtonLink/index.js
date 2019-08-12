@@ -1,6 +1,17 @@
 import React from 'react'
+import getMarginClassName from '../../utilities/getMarginClassName'
+import getPaddingClassName from '../../utilities/getPaddingClassName'
 
-const ButtonLink = ({ className, block, color, size, href, children }) => {
+const ButtonLink = ({
+  className,
+  block,
+  color,
+  size,
+  href,
+  children,
+  margin,
+  padding
+}) => {
   let buttonClass = 'paper-btn'
   if (size) {
     buttonClass = `${buttonClass} btn-${size}`
@@ -16,6 +27,16 @@ const ButtonLink = ({ className, block, color, size, href, children }) => {
 
   if (className) {
     buttonClass = `${buttonClass} ${className}`
+  }
+
+  const marginClassName = getMarginClassName(margin)
+  if (marginClassName) {
+    buttonClass = `${buttonClass} ${marginClassName}`
+  }
+
+  const paddingClassName = getPaddingClassName(padding)
+  if (padding) {
+    buttonClass = `${buttonClass} ${paddingClassName}`
   }
 
   return (
