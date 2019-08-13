@@ -4,17 +4,39 @@ A React implementation of the CSS library [PaperCSS](https://www.getpapercss.com
 
 ## Instalation
 
-In your project directory run the command
+First install the PaperCSS library:
+
+```bash
+npm i -S papercss
+```
+
+or
+
+```bash
+yarn papercss
+```
+
+And include the css file in your project:
+
+```js
+import 'papercss/dist/paper.min.css'
+
+...
+```
+
+Then in your project directory run the command:
 
 ```bash
 npm i -S papercss-react
 ```
 
+or
+
 ```bash
 yarn papercss-react
 ```
 
-Then in your file import the component/s you want to use:
+And finally in your file import the component/s you want to use:
 
 ```js
 import { Button } from 'papercss-react'
