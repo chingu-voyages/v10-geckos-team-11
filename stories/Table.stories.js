@@ -5,7 +5,7 @@ import Table from '../src/Table'
 
 storiesOf('Table', module)
   .add('default', () => (
-    <table>
+    <Table>
       <thead>
         <tr>
           <th>#</th>
@@ -34,7 +34,7 @@ storiesOf('Table', module)
           <td>California, USA</td>
         </tr>
       </tbody>
-    </table>
+    </Table>
   ))
   .add('hover', () => (
     <Table hover>

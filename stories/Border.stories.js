@@ -4,6 +4,30 @@ import { storiesOf } from '@storybook/react'
 import Border from '../src/Border/'
 
 storiesOf('Border', module)
+  .add('colors', () => {
+    return (
+      <>
+        <div className="row">
+          <Border className="sm-2 col">Border primary</Border>
+          <Border className="sm-2 col" color="secondary">
+            Border secondary
+          </Border>
+          <Border className="sm-2 col" color="success">
+            Border success
+          </Border>
+          <Border className="sm-2 col" color="warning">
+            Border warning
+          </Border>
+          <Border className="sm-2 col" color="danger">
+            Border danger
+          </Border>
+          <Border className="sm-2 col" bgColor="primary">
+            Border white
+          </Border>
+        </div>
+      </>
+    )
+  })
   .add('shapes', () => {
     return (
       <>
@@ -30,28 +54,22 @@ storiesOf('Border', module)
       </>
     )
   })
-  .add('colors', () => {
+  .add('shadows', () => {
     return (
-      <>
-        <div className="row">
-          <Border className="sm-2 col">Border primary</Border>
-          <Border className="sm-2 col" color="secondary">
-            Border secondary
-          </Border>
-          <Border className="sm-2 col" color="success">
-            Border success
-          </Border>
-          <Border className="sm-2 col" color="warning">
-            Border warning
-          </Border>
-          <Border className="sm-2 col" color="danger">
-            Border danger
-          </Border>
-          <Border className="sm-2 col" bgColor="primary">
-            Border white
-          </Border>
-        </div>
-      </>
+      <div className="row flex-spaces">
+        <Border className="sm-3 col" shadow="large">
+          Large
+        </Border>
+        <Border className="sm-3 col" shadow>
+          Default
+        </Border>
+        <Border className="sm-3 col" shadow="small">
+          Small
+        </Border>
+        <Border className="sm-3 col" shadow="hover">
+          Hover
+        </Border>
+      </div>
     )
   })
   .add('styles', () => {
@@ -72,23 +90,5 @@ storiesOf('Border', module)
           </Border>
         </div>
       </>
-    )
-  })
-  .add('shadows', () => {
-    return (
-      <div className="row flex-spaces">
-        <Border className="sm-3 col" shadow="large">
-          Large
-        </Border>
-        <Border className="sm-3 col" shadow>
-          Default
-        </Border>
-        <Border className="sm-3 col" shadow="small">
-          Small
-        </Border>
-        <Border className="sm-3 col" shadow="hover">
-          Hover
-        </Border>
-      </div>
     )
   })

@@ -7,7 +7,7 @@ import AccordionToggle from '../src/Collapsible/Accordion/AccordionToggle'
 import AccordionBody from '../src/Collapsible/Accordion/AccordionBody'
 import Accordion from '../src/Collapsible/Accordion/Accordion'
 
-storiesOf('Collapsible/Accordion', module)
+storiesOf('Collapsible', module)
   .add('Collapsible', () => {
     return (
       <div>

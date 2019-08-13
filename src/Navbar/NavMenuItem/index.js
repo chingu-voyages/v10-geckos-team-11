@@ -1,9 +1,29 @@
 import React from 'react'
+import getClassNames from '../../utilities/getClassNames'
 
-const NavMenuItem = ({ children, href, className }) => {
+const NavMenuItem = ({
+  children,
+  href,
+  className,
+  color,
+  bgColor,
+  margin,
+  padding
+}) => {
   return (
-    <li className={className}>
-      <a href={href}>{children}</a>
+    <li>
+      <a
+        href={href}
+        className={getClassNames({
+          className,
+          color,
+          bgColor,
+          margin,
+          padding
+        })}
+      >
+        {children}
+      </a>
     </li>
   )
 }
