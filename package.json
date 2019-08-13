@@ -1,7 +1,11 @@
 {
-  "name": "react-papercss",
-  "version": "0.0.1",
-  "main": "index.js",
+  "name": "papercss-react",
+  "version": "1.0.0",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/chingu-voyages/v10-geckos-team-11",
   "author": "Edward Hong <edward.hong527@gmail.com>",
   "license": "MIT",
@@ -16,7 +20,8 @@
     "deploy": "gh-pages -d storybook-static",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepublish": "npm run build"
   },
   "husky": {
     "hooks": {
