@@ -7,7 +7,16 @@ const getClassNames = ({
   padding,
   color,
   bgColor,
-  inline
+  inline,
+  card,
+  cardBody,
+  cardFooter,
+  cardHeader,
+  cardLink,
+  cardSubtitle,
+  cardText,
+  cardTitle,
+  collapsibleBody
 }) => {
   const classNamesArray = []
 
@@ -33,6 +42,42 @@ const getClassNames = ({
 
   if (inline) {
     classNamesArray.push('inline')
+  }
+
+  if (card) {
+    classNamesArray.push('card')
+  }
+
+  if (cardBody) {
+    classNamesArray.push('card-body')
+  }
+
+  if (cardFooter) {
+    classNamesArray.push('card-footer')
+  }
+
+  if (cardHeader) {
+    classNamesArray.push('card-header')
+  }
+
+  if (cardLink) {
+    classNamesArray.push('card-link')
+  }
+
+  if (cardSubtitle) {
+    classNamesArray.push('card-subtitle')
+  }
+
+  if (cardText) {
+    classNamesArray.push('card-text')
+  }
+
+  if (cardTitle) {
+    classNamesArray.push('card-title')
+  }
+
+  if (collapsibleBody) {
+    classNamesArray.push('collapsible-body')
   }
 
   return classNamesArray.join(' ')

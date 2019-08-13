@@ -7,6 +7,12 @@ const Article = ({ className, children, margin, padding, color, bgColor }) => {
   if (className) {
     articleClassName = `${articleClassName} ${className}`
   }
+  if (color) {
+    articleClassName = `${articleClassName} text-${color}`
+  }
+  if (bgColor) {
+    articleClassName = `${articleClassName} background-${bgColor}`
+  }
   const marginClassName = getMarginClassName(margin)
   if (marginClassName) {
     articleClassName = `${articleClassName} ${marginClassName}`
