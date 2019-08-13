@@ -8,7 +8,7 @@
   ],
   "repository": "https://github.com/chingu-voyages/v10-geckos-team-11",
   "author": "Edward Hong <edward.hong527@gmail.com>",
-  "license": "MIT",
+  "license": "ISC",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
